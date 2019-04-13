@@ -1,4 +1,4 @@
-
+from __future__ import unicode_literals
 PROTOCOL = 'z2'
 FIELD_COMPAT = 'compat'
 FIELD_CONTROL = 'control'
