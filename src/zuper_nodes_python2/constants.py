@@ -1,13 +1,13 @@
 from __future__ import unicode_literals
-PROTOCOL = 'z2'
-FIELD_COMPAT = 'compat'
-FIELD_CONTROL = 'control'
-FIELD_TOPIC = 'topic'
-FIELD_DATA = 'data'
+PROTOCOL = u'z2'
+FIELD_COMPAT = u'compat'
+FIELD_CONTROL = u'control'
+FIELD_TOPIC = u'topic'
+FIELD_DATA = u'data'
 
-CTRL_CAPABILITIES = 'capabilities'
-CTRL_UNDERSTOOD = 'understood'
-CTRL_NOT_UNDERSTOOD = 'not-understood'
-CTRL_OVER = 'over'
-CTRL_ABORTED = 'aborted'
+CTRL_CAPABILITIES = u'capabilities'
+CTRL_UNDERSTOOD = u'understood'
+CTRL_NOT_UNDERSTOOD = u'not-understood'
+CTRL_OVER = u'over'
+CTRL_ABORTED = u'aborted'
 

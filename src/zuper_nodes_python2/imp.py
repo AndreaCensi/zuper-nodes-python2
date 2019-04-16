@@ -138,7 +138,7 @@ def wrap_direct(agent):
 def send_control_message(f_out, c, msg=None):
     m = {}
     m[FIELD_COMPAT] = [PROTOCOL]
-    m[FIELD_CONTROL] = c
+    m[FIELD_CONTROL] = unicode(c)
     m[FIELD_DATA] = msg
     cbor.dump(m, f_out)
     logger.info('Sending control %s' % c)
@@ -148,7 +148,7 @@ def send_control_message(f_out, c, msg=None):
 def send_topic_message(f_out, topic, data):
     m = {}
     m[FIELD_COMPAT] = [PROTOCOL]
-    m[FIELD_TOPIC] = topic
+    m[FIELD_TOPIC] = unicode(topic)
     m[FIELD_DATA] = data
     cbor.dump(m, f_out)
     logger.info('Sending topic %s' % topic)

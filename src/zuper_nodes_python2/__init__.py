@@ -6,5 +6,5 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-logging.info('zuper-nodes-python2 %s' % __version__)
+logging.info('zn-p2 %s' % __version__)
 from .imp import *
