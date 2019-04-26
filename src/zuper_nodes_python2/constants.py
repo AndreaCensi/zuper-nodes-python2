@@ -4,6 +4,8 @@ FIELD_COMPAT = u'compat'
 FIELD_CONTROL = u'control'
 FIELD_TOPIC = u'topic'
 FIELD_DATA = u'data'
+FIELD_TIMING = u'timing'
+TOPIC_ABORTED = 'aborted'
 
 CTRL_CAPABILITIES = u'capabilities'
 CTRL_UNDERSTOOD = u'understood'

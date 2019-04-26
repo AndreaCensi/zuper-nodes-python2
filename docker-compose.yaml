@@ -1,0 +1,18 @@
+version: '2.4'
+services:
+  tester:
+    build: .
+    volumes:
+      - fifos2:/fifos
+      - ./src/zuper_nodes_python2:/project/src/zuper_nodes_python2
+      - ./test.py:/project/test.py
+  agent:
+    build:
+      context: ${DT_ENV_DEVELOPER}/aido/challenge-aido_LF/minimal_agent
+    environment:
+      AIDONODE_DATA_IN: /fifos/agent-in
+      AIDONODE_DATA_OUT: fifo:/fifos/agent-out
+    volumes:
+      - fifos2:/fifos
+volumes:
+  fifos2:

@@ -1,1 +1,4 @@
 cbor2
+six
+numpy
+opencv-python
