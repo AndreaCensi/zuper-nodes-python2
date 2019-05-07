@@ -14,6 +14,13 @@ from .constants import *
 from .reading import read_next_cbor
 from .utils import indent
 
+# Python 2 compatibility.
+try:
+    TimeoutError
+except NameError:
+    import socket
+    TimeoutError = socket.timeout
+
 __all__ = ['ComponentInterface']
 
 

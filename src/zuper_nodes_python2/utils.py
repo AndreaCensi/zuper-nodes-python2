@@ -1,5 +1,6 @@
-import time
 import six
+
+
 def indent(s, prefix, first=None):
     s = str(s)
     assert isinstance(prefix, six.string_types), type(prefix)

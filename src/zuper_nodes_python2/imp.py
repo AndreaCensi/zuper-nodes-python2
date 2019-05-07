@@ -11,6 +11,13 @@ import cbor2 as cbor
 from . import logger
 from .constants import *
 
+# Python 2 compatibility.
+try:
+    TimeoutError
+except NameError:
+    import socket
+    TimeoutError = socket.timeout
+
 __all__ = ['wrap_direct', 'Context']
 
 

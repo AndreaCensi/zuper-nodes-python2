@@ -3,6 +3,12 @@ import time
 from . import logger
 import select
 import cbor2 as cbor
+# Python 2 compatibility.
+try:
+    TimeoutError
+except NameError:
+    import socket
+    TimeoutError = socket.timeout
 
 def wait_for_data(f, timeout=None, waiting_for = None):
     """ Raises StopIteration if it is EOF.
