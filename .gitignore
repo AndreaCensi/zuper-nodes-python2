@@ -7,3 +7,5 @@ l.dot
 out*json
 language.dot
 *pyc
+idst
+dist
