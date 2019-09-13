@@ -156,8 +156,8 @@ class ComponentInterface(object):
                     raise ExternalProtocolViolation(msg)
 
             if self.nreceived == 0:
-                msg = 'Received first message of topic %s' % topic
-                logger.info(msg)
+                msg1 = 'Received first message of topic %s' % topic
+                logger.info(msg1)
             self.nreceived += 1
             return MsgReceived(topic, msg[FIELD_DATA])
 
