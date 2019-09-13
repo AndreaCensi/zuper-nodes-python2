@@ -155,6 +155,9 @@ class ComponentInterface(object):
                                                                                              topic=topic)
                     raise ExternalProtocolViolation(msg)
 
+            if self.nreceived == 0:
+                msg = 'Received first message of topic %s' % topic
+                logger.info(msg)
             self.nreceived += 1
             return MsgReceived(topic, msg[FIELD_DATA])
 
@@ -164,7 +167,9 @@ class ComponentInterface(object):
                 msg += ' Expected topic "{}".'.format(expect_topic)
             raise StopIteration(msg)
         except TimeoutError as e:
-            msg = 'Timeout detected on %s after %d messages.' % (self.fnout, self.nreceived)
+            msg = 'Timeout declared after waiting %s sec on %s after having received %d messages.' % (timeout,
+                                                                                                    self.fnout,
+                                                                                     self.nreceived)
             if expect_topic:
                 msg += ' Expected topic "{}".'.format(expect_topic)
             raise TimeoutError(msg)
