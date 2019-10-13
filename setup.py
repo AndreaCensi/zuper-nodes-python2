@@ -21,11 +21,11 @@ def get_version(filename):
         raise ValueError(filename)
     return version
 
-
+line = 'daffy'
 version = get_version(filename='src/zuper_nodes_python2/__init__.py')
 
 setup(
-        name='zuper-nodes-python2',
+        name=f'zuper-nodes-python2-{line}',
         version=version,
         keywords='',
         package_dir={'': 'src'},
