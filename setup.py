@@ -25,7 +25,7 @@ line = 'daffy'
 version = get_version(filename='src/zuper_nodes_python2/__init__.py')
 
 setup(
-        name=f'zuper-nodes-python2-{line}',
+        name='zuper-nodes-python2-%s' % line,
         version=version,
         keywords='',
         package_dir={'': 'src'},
