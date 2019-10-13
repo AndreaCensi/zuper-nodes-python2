@@ -34,6 +34,8 @@ setup(
         ],
         install_requires=[
             'cbor2',
+            'six',
+            'numpy',
         ],
 
 )
