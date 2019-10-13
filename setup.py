@@ -21,7 +21,7 @@ def get_version(filename):
         raise ValueError(filename)
     return version
 
-line = 'daffy'
+line = 'z5'
 version = get_version(filename='src/zuper_nodes_python2/__init__.py')
 
 setup(
