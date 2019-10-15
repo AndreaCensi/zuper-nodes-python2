@@ -148,7 +148,7 @@ def send_control_message(f_out, c, msg=None):
     m[FIELD_CONTROL] = unicode(c)
     m[FIELD_DATA] = msg
     cbor.dump(m, f_out)
-    logger.info('Sending control %s' % c)
+    # logger.info('Sending control %s' % c)
     f_out.flush()
 
 
@@ -158,7 +158,7 @@ def send_topic_message(f_out, topic, data):
     m[FIELD_TOPIC] = unicode(topic)
     m[FIELD_DATA] = data
     cbor.dump(m, f_out)
-    logger.info('Sending topic %s' % topic)
+    # logger.info('Sending topic %s' % topic)
     f_out.flush()
 
 
