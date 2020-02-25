@@ -105,7 +105,7 @@ class ComponentInterface(object):
         try:
             self.fpin.write(j)
             self.fpin.flush()
-        except BrokenPipeError as e:
+        except BaseException as e:
             msg = ('While attempting to write to node "{nickname}", '
                    'I reckon that the pipe is closed and the node exited.').format(nickname=self.nickname)
             try:
