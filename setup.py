@@ -33,7 +33,7 @@ setup(
             'zuper_nodes_python2',
         ],
         install_requires=[
-            'cbor2',
+            'cbor2<5',
             'six',
             'numpy',
         ],
