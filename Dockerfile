@@ -1,7 +1,7 @@
 FROM python:2.7
 
 WORKDIR /project
-COPY requirements.txt .
+COPY requirements.* ./
 RUN pip install -r requirements.txt
 RUN pip list
 
