@@ -1,4 +1,4 @@
-cbor2
+cbor2<5
 six
 numpy
 opencv-python
