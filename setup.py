@@ -21,21 +21,23 @@ def get_version(filename):
         raise ValueError(filename)
     return version
 
+
 line = 'z5'
 version = get_version(filename='src/zuper_nodes_python2/__init__.py')
+install_requires = [
+    'cbor2<5',
+    'six',
+    'numpy',
+]
 
 setup(
-        name='zuper-nodes-python2-%s' % line,
-        version=version,
-        keywords='',
-        package_dir={'': 'src'},
-        packages=[
-            'zuper_nodes_python2',
-        ],
-        install_requires=[
-            'cbor2<5',
-            'six',
-            'numpy',
-        ],
+    name='zuper-nodes-python2-%s' % line,
+    version=version,
+    keywords='',
+    package_dir={'': 'src'},
+    packages=[
+        'zuper_nodes_python2',
+    ],
+    install_requires=install_requires
 
 )
